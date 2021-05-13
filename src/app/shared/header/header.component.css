@@ -1,0 +1,19 @@
+header {
+    background-color: #2d2d2a;
+    height: 60px;
+}
+
+#userName,
+.fas {
+    color: aliceblue;
+    display: inline-flex;
+}
+
+#userName {
+    font-size: 24px;
+    text-align: center;
+}
+
+i {
+    margin-left: 2px;
+}

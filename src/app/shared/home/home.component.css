@@ -1,0 +1,17 @@
+body {
+    background-color: #d8cbc7;
+    margin: 0%;
+}
+
+li,
+aside,
+section {
+    border-style: dashed;
+    border-width: 1px;
+    background-color: #d8cbc7;
+}
+
+section,
+aside {
+    display: inline-flex;
+}
