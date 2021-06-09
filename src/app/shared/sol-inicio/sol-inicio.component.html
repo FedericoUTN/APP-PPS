@@ -37,15 +37,15 @@
         <div class="cuerpoForm">
             <h4 class="mb-3"><u>Fecha de Solicitud Inicial</u></h4>
             <label for="solFormFN">Fecha de comienzo</label>
-            <input type="date" id="solFormFN">
+            <input type="date" id="solFormFN" class="form-control" formControlName="fechaC" [(ngModel)]="solicitud.fechaIncial" name="fechaC">
             <hr>
             <h4 class="mb-3"><u>Caracteristica de la Pasantia</u></h4>
             <label for="solFormCPPS">Caracteristica PPS</label>
-            <input type="text" id="solFormCPPS">
+            <input type="text" id="solFormCPPS" class="form-control" formControlName="caracteristicas" [(ngModel)]="solicitud.caracteristicas" name="caracteristicas">
             <hr>
             <h4 class="mb-3"><u>Docente Tutor</u></h4>
             <label for="solFormTutor">Docente Tutor</label>
-            <input type="text" id="solFormTutor">
+            <input type="text" id="solFormTutor" class="form-control" formControlName="docenteTutor" [(ngModel)]="solicitud.docenteTutor" name="docenteTutor">
             <hr>
             <h4 class=" mb-3 subTitle"><u>Datos de la Entidad/Organizacion/Institucion</u></h4>
         </div>
@@ -53,26 +53,26 @@
         <div class="table-responsive cuerpoForm">
             <table class="table table-striped table-borderless table-bordered">
                 <tr>
-                    <th><label for="solFormNameE">Nombre de la entidad:</label></th>
-                    <td><input type="text" id="solFormNameE" /></td>
+                    <th><label for="solFormNameE">Nombre de la empresa:</label></th>
+                    <td><input type="text" id="solFormNameE" class="form-control" formControlName="nombreE" [(ngModel)]="empresa.nombre" name="nombreE" /></td>
                     <th><label for="solFormDirE">Direccion:</label></th>
-                    <td><input type="text" id="solFormDirE" /></td>
+                    <td><input type="text" id="solFormDirE" class="form-control" formControlName="direccionE" [(ngModel)]="empresa.direccion" name="direccionE" /></td>
                 </tr>
                 <tr>
                     <th><label for="solFormLocE">Localidad:</label></th>
-                    <td><input type="text" id="solFormLocE"></td>
+                    <td><input type="text" id="solFormLocE" class="form-control" formControlName="localidadE" [(ngModel)]="empresa.localidad" name="localidadE"></td>
                     <th><label for="solFormCPE">CP:</label></th>
-                    <td><input type="text" id="solFormCPE" /></td>
+                    <td><input type="text" id="solFormCPE" class="form-control" formControlName="cpE" [(ngModel)]="empresa.codigoPostal" name="cpE" /></td>
                 </tr>
                 <tr>
                     <th><label for="solFormTelE">Telefono:</label></th>
-                    <td><input type="text" id="solFormTelE" /></td>
+                    <td><input type="text" id="solFormTelE" class="form-control" formControlName="telefonoE" [(ngModel)]="empresa.telefono" name="telefonoE" /></td>
                     <th><label for="solFormPC">Persona de Contacto:</label></th>
-                    <td><input type="text" id="solFormPC" /></td>
+                    <td><input type="text" id="solFormPC" class="form-control" formControlName="personaContacto" [(ngModel)]="empresa.personaContacto" name="personaContacto" /></td>
                 </tr>
                 <tr>
                     <th><label for="solFormMailE">Mail de la empresa:</label></th>
-                    <td><input type="text" id="solFormMailE" /></td>
+                    <td><input type="text" id="solFormMailE" class="form-control" formControlName="emailE" [(ngModel)]="empresa.email" name="emailE" /></td>
                 </tr>
             </table>
             <hr>
@@ -87,6 +87,9 @@
             <p>Apellido :{{user.apellido}}</p>
             <p>Legajo: {{user.legajo}}</p>
             <p>DNI: {{user.dni}}</p>
+            <p>Fecha: {{solicitud.fechaIncial}}</p>
+            <p>Tutor: {{solicitud.docenteTutor}}</p>
+            <p>Nombre Empresa: {{empresa.nombre}}</p>
             <div class="botones">
                 <button type="submit" class="btn btn-outline-primary col-12 ">Guardar</button>
             </div>
