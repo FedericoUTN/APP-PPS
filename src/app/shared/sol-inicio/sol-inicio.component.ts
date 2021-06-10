@@ -17,7 +17,7 @@ export class SolInicioComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder) {
     this.formSolicitud = this.formBuilder.group({
-      nombre: ['', [Validators.required]],
+      nombre: ['', [Validators.required, Validators.minLength(4)]],
       apellido: [''],
       legajo: [''],
       dni: [''],

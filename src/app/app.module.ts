@@ -11,6 +11,9 @@ import { SolInicioComponent } from './shared/sol-inicio/sol-inicio.component';
 
 import {ReactiveFormsModule} from '@angular/forms';
 import { ActaFinComponent } from './shared/acta-fin/acta-fin.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatBadgeModule} from '@angular/material/badge';
+
 
 @NgModule({
   declarations: [
@@ -20,13 +23,16 @@ import { ActaFinComponent } from './shared/acta-fin/acta-fin.component';
     FooterComponent,
     PlaTrabajoComponent,
     SolInicioComponent,
-    ActaFinComponent
+    ActaFinComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatBadgeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

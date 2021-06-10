@@ -7,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  notification: number;
+
+  constructor() {
+    this.notification = 1;
+  }
 
   ngOnInit(): void {
   }

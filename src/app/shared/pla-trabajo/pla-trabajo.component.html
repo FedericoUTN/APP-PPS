@@ -1,23 +1,20 @@
-<!DOCTYPE HTML>
-<html>
+<div class="container">
 
-<head>
-    <title>Plan de trabajo</title>
-    <meta charset="UTF-8">
-</head>
-
-<body>
-    <h1 align="center">Plan de Trabajo</h1>
-    <p align="right">
+    <h1 class="text-center">Plan de Trabajo</h1>
+    <p class="text-end">
         <button type="Submit">Informacion</button>
     </p>
-    <p>Nombre de la empresa</p>
-    <p>Objetivos del proyecto a realizar</p>
+    <h2>Nombre de la empresa</h2>
+    <h3>Objetivos del proyecto a realizar</h3>
     <form>
-        <p>Fecha : <input type="date" value=" "> <input type="submit" value="Generar"> </p>
+        <div class="row">
+            <div class="col-4"><label for="solFormDate" class="form-label">Fecha : </label><input id="solFormDate" type="date" class="form-control"></div>
+            <div class="col-3">
+                <small>----</small><button class="btn btn-outline-primary ">Generar</button></div>
+        </div>
     </form>
 
-    <table border="1px solid">
+    <table class="table-primary table">
         <tr>
             <td>Fecha</td>
             <td>Descripccion</td>
@@ -47,7 +44,7 @@
     <br>
     <span><a href="#" target="_blank">Enviar Mensaje</a></span>
     <span><a href="#" target="_blank">Poner nota</a></span>
-    <table align=right border="1px solid">
+    <table class="borde text-end">
         <tr>
             <td>Crear Linea</td>
             <td>Borrar ultima Linea</td>
@@ -62,7 +59,4 @@
     <br>
     <button value="Volver Atras">Volver</button>
 
-
-</body>
-
-</html>
+</div>
