@@ -1,0 +1,23 @@
+header {
+  background-color: #2d2d2a;
+  height: 10%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  width: 100%;
+}
+.mt-1 {
+  cursor: pointer;
+}
+#userName,
+.fas {
+  color: aliceblue;
+}
+
+#userName {
+  font-size: 24px;
+}
+
+.textoBlanco {
+  color: yellow;
+}
