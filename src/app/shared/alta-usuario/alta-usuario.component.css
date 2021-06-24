@@ -1,0 +1,21 @@
+.cuerpo {
+    background: rgb(63, 94, 251);
+    background: linear-gradient( 90deg, rgba(63, 94, 251, 1) 0%, rgba(195, 77, 150, 1) 90%, rgba(252, 70, 107, 1) 100%);
+}
+
+.container {
+    margin-top: 2.5%;
+    margin-bottom: 3%;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    border-width: 3px;
+    width: 60% !important;
+    background-color: white;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

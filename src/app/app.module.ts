@@ -13,6 +13,8 @@ import {ReactiveFormsModule} from '@angular/forms';
 import { ActaFinComponent } from './shared/acta-fin/acta-fin.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatBadgeModule} from '@angular/material/badge';
+import { AltaUsuarioComponent } from './shared/alta-usuario/alta-usuario.component';
+import { LoginComponent } from './shared/login/login.component';
 
 
 @NgModule({
@@ -24,6 +26,8 @@ import {MatBadgeModule} from '@angular/material/badge';
     PlaTrabajoComponent,
     SolInicioComponent,
     ActaFinComponent,
+    AltaUsuarioComponent,
+    LoginComponent,
 
   ],
   imports: [
