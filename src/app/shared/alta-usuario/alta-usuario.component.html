@@ -1,1 +1,39 @@
-<p>alta-usuario works!</p>
+<div class="container cuerpo">
+    <h1 class="text-center">REGISTRARSE AQUI</h1>
+    <form action="" [formGroup]='formAltaUsuario' (ngSubmit)='save()' #f='ngForm'>
+        <div class="container">
+            <div class="mb-3 px-3">
+                <label for="InputName" class="form-label">Nombre</label>
+                <input type="text" class="form-control" name="name" id="InputName" formControlName="nombre" [(ngModel)]="user.nombre" name="nombre"></div>
+            <div class="mb-3 px-3">
+                <label for="InputLastname" class="form-label">Apellido</label>
+                <input type="text" class="form-control" name="lastname" id="InputLastname" formControlName="apellido" [(ngModel)]="user.apellido" name="apellido">
+            </div>
+            <div class="mb-3 px-3">
+                <label for="InputLegajo" class="form-label">Legajo</label>
+                <input type="number" class="form-control" name="legajo" id="InputLegajo" formControlName="legajo" [(ngModel)]="user.legajo" name="legajo">
+            </div>
+            <div class="mb-3 px-3">
+                <label for="InputEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" name="email" id="InputLegajo" formControlName="email" [(ngModel)]="user.email" name="email">
+            </div>
+            <div class="mb-3 px-3">
+                <label for="InputPassword" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" name="password" id="InputPassword" formControlName="contraseña" [(ngModel)]="user.password" name="contraseña">
+            </div>
+            <div class="form-check mb-3 px-5">
+                <input class="form-check-input" type="radio" name="RadioInput" id="InputStudent" checked value='Estudiante' formControlName="tipo" [(ngModel)]="user.tipo" name="tipo">
+                <label class="form-check-label" for="InputStudent">Estudiante</label>
+            </div>
+            <div class="form-check mb-3 px-5">
+                <input class="form-check-input" type="radio" name="RadioInput" id="InputProfessor" value='Profesor' formControlName="tipo" [(ngModel)]="user.tipo" name="tipo">
+                <label class="form-check-label" for="InputProfessor">Profesor</label>
+            </div>
+            <div class="form-check mb-3 px-5">
+                <input class="form-check-input" type="radio" name="RadioInput" id="InputResponsable" value='Responsable' formControlName="tipo" [(ngModel)]="user.tipo" name="tipo">
+                <label class="form-check-label" for="InputResponsable">Responsable</label>
+            </div>
+            <button type="submit " class="btn btn-primary">Registrarse</button>
+        </div>
+    </form>
+</div>

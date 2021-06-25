@@ -1,0 +1,47 @@
+.cuerpo {
+    background: rgb(63, 94, 251);
+    background: linear-gradient( 90deg, rgba(63, 94, 251, 1) 0%, rgba(195, 77, 150, 1) 90%, rgba(252, 70, 107, 1) 100%);
+}
+
+.container {
+    margin-top: 2.5%;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    border-width: 3px;
+    height: 40%;
+    width: 60%;
+}
+
+.container h1 {
+    margin-bottom: 50px;
+}
+
+.container img {
+    width: 200px;
+    margin: 0px 50px 0px 10px;
+    /* display: inline-block; */
+}
+
+.form-group {
+    margin-left: 5%;
+    margin-top: 20px;
+}
+
+.form-group input {
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.form-group label {
+    display: inline-block;
+    width: 100px;
+}
+
+button {
+    margin: 10px 50px;
+}
+
+.inp {
+    margin-left: 20%;
+}
