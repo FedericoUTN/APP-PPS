@@ -8,6 +8,8 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 export class PlaTrabajoComponent implements OnInit {
 formPlan: FormGroup;
+isFormPlan = false;
+
   constructor(private formBuilder: FormBuilder) {
 this.formPlan = this.formBuilder.group({
   fecha: [''],
