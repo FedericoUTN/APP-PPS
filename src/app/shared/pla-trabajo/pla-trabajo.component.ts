@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-pla-trabajo',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlaTrabajoComponent implements OnInit {
 
-  constructor() { }
+formPlan: FormGroup;
+isFormPlan = false;
 
-  ngOnInit(): void {
-  }
+    constructor(private formBuilder: FormBuilder) {
+  this.formPlan = this.formBuilder.group({
+    fecha: [''],
+    descripcion: [''],
+    horasP: [''],
+    hottalT: ['']
+  });
+     }
+
+    ngOnInit(): void {
+    }
 
 }
