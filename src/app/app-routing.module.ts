@@ -5,6 +5,7 @@ import { AltaUsuarioComponent } from './shared/alta-usuario/alta-usuario.compone
 import { HomeComponent } from './shared/home/home.component';
 import { LoginComponent } from './shared/login/login.component';
 import { PlaTrabajoComponent } from './shared/pla-trabajo/pla-trabajo.component';
+import { SeguimientoComponent } from './shared/seguimiento/seguimiento.component';
 import { SolInicioComponent } from './shared/sol-inicio/sol-inicio.component';
 
 const routes: Routes = [
@@ -14,6 +15,7 @@ const routes: Routes = [
     {path: 'actaFin', component: ActaFinComponent},
     {path: 'login', component: LoginComponent},
     {path: 'altaUsuario', component: AltaUsuarioComponent},
+    {path: 'seguimientos', component: SeguimientoComponent},
     {path: '**', pathMatch: 'full', redirectTo: 'home'}
 ];
 
