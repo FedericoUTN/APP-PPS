@@ -1,28 +1,51 @@
-<body class="col-12">
-    <aside class="col-4">
-        <ul class="nav flex-column">
-            <li>Opciones de Menu</li>
-            <li class="nav-item">
-                <a class="nav-link active" routerLink="/solicitudInicio">Solicitud de Inicio </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" routerLink="/planTrabajo">Plan Trabajo</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" routerLink="/actaFin">Acta de Finalizacion</a>
-            </li>
+<body class="container-fluid">
+  <h1 class="text-center pt-4">
+    <strong>BIENVENIDO A LAS PRACTICAS PROFESIONALISANTES</strong>
+  </h1>
+  <div class="pt-2 secciones">
+    <div class="row" >
+      <div class="col-2 pt-3" id="solIni" routerLink="/solicitudInicio">
+        <h2 class="text-center">SOLICITUD DE INICIO</h2>
+        <p>
+          Primer formulario que debés cargar para iniciar el proceso de tu PPS.
+        </p>
+        <p>
+          Para completar satisfactoriamente este documento, deberás contar con
+          la siguiente información:
+        </p>
+        <ul>
+          <li>Datos de la Entidad y persona de contacto</li>
+          <li>
+            Características generales de las Prácticas a realizar en dicha
+            Entidad
+          </li>
+          <li>
+            Certificado de Estado Académico emitido por la UTN (adjuntar PDF)
+          </li>
         </ul>
-    </aside>
-    <section class="col-8 float-end">
-        <h1>TITULO</h1>
-        <hr>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, quia. Totam est, placeat qui commodi amet molestiae omnis? Doloribus debitis suscipit itaque sed maiores voluptates delectus illum nemo distinctio voluptatum.</p>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae, autem cumque illum error rerum deleniti consequatur quis minima nihil et sint temporibus blanditiis magni asperiores, obcaecati placeat! Deserunt, voluptas similique.</p>
-    </section>
-    <section class="col-8 float-end">
-        <h2>SUBTITULO</h2>
-        <hr>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut ullam exercitationem nemo neque reiciendis itaque, a nulla nam amet nobis illo dignissimos, facere animi ipsam rerum repellendus accusamus molestias corrupti?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic omnis harum, unde dolore ad molestias. Voluptatem laboriosam accusantium sapiente veritatis nihil possimus voluptates illo fugiat sit, nobis nesciunt maiores? Ullam?</p>
-    </section>
+      </div>
+      <div class="col-2 pt-3" id="planTrabajo" routerLink="/planTrabajo">
+        <h2 class="text-center">PLAN DE TRABAJO</h2>
+        <p>
+          Aquí debés describir día por día las actividades que realizarás a lo
+          largo de tu Práctica. <br>
+          Este formulario te servirá durante tu PPS, ya
+          que funciona como guía para las tareas que colocaras luego en los
+          Seguimientos Semanales.
+        </p>
+      </div>
+      <div class="col-2 pt-3" id="seguimientos" routerLink="/seguimientos">
+          <h2 class="text-center">Seguimientos</h2>
+          <p>Informe semanal, donde deberás describir las actividades realizadas durante ese período y las reflexiones correspondientes, tanto personales como del equipo.
+        </p>
+        <p>Este documento debe ser completado de forma semanal por el Alumno y el Docente Tutor es quien los revisa y les da curso en el SPPS.</p>
+      </div>
+      <div class="col-2 pt-3" id="actaFin" routerLink="/actaFin">
+          <h2 class="text-center">Acta de Finalización</h2>
+          <p>Último formulario que debés completar y podrás hacerlo una vez que hayas completado todos los seguimientos semanales</p>
+          <p>En este documento, deberás escribir la conclusión final de tu PPS y las reflexiones sobre tu experiencia.
+            Además, podrás calificar el labor académico, Administrativo y Docente, durante las mismas.</p>
+      </div>
+    </div>
+  </div>
 </body>
