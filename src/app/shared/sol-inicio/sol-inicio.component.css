@@ -1,3 +1,16 @@
+.formulario {
+    background-color: #ff6a6a;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.container {
+    border-style: solid;
+    border-radius: 5px;
+    border-color: black;
+    background-color: white;
+}
+
 #title {
     background-color: #a7bbc7;
 }

@@ -1,17 +1,48 @@
 body {
-    background-color: #d8cbc7;
-    margin: 0%;
+    width: 100%;
 }
 
-li,
-aside,
-section {
-    border-style: dashed;
-    border-width: 1px;
-    background-color: #d8cbc7;
+.secciones {
+    display: flex;
+    align-items: center;
+    height: 90%;
+    padding-bottom: 10%;
 }
 
-section,
-aside {
-    display: inline-flex;
+h1 {
+    padding-top: 70px !important;
+    font-size: 50px;
+}
+
+.col-2 {
+    cursor: pointer;
+    width: 20%;
+    margin-right: 2.5%;
+    margin-left: 2.5%;
+    border-radius: 10px;
+    border: black 5px;
+}
+
+.col-2 p {
+    font-size: 17px;
+}
+
+.col-2 h2 {
+    font-size: 25px;
+}
+
+#solIni {
+    background-color: #ff6a6a;
+}
+
+#planTrabajo {
+    background-color: #ff9914ce;
+}
+
+#seguimientos {
+    background-color: #deff4abd;
+}
+
+#actaFin {
+    background-color: #1ab6b6ea;
 }

@@ -15,68 +15,51 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Lu 18-06</td>
-                <td>Tarea 1</td>
-                <td>04</td>
-                <td>04</td>
+            <tr *ngFor="let act of PlanTrabajo">
+                <td>{{act.fecha}}</td>
+                <td>{{act.descripcion}}</td>
+                <td>{{act.horasParciales}}</td>
+                <td>{{act.hotasTotales}}</td>
             </tr>
+
+
+
+
+
             <tr>
-                <td>Ma 19-06</td>
-                <td>Tarea 2</td>
-                <td>04</td>
-                <td>08</td>
-            </tr>
-            <tr>
-                <td>Mi 20-06</td>
-                <td>Tarea 3</td>
-                <td>04</td>
-                <td>12</td>
-            </tr>
-            <tr>
-                <td>Ju 21-06</td>
-                <td>Tarea 4</td>
-                <td>04</td>
-                <td>16</td>
-            </tr>
-            <tr>
-                <td>Vi 22-06</td>
-                <td>Tarea 5</td>
-                <td>04</td>
-                <td>20</td>
-            </tr>
-            <tr>
-                <td colspan="3">Total Semana 1</td>
-                <td>20</td>
-            </tr>
-            <tr>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-            </tr>
-            <tr>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-            </tr>
-            <tr>
-                <td>Vi 31-08</td>
-                <td>Tarea 51</td>
-                <td>04</td>
-                <td>202</td>
-            </tr>
-            <tr>
-                <td colspan="3">Total Semana xx </td>
-                <td>202</td>
-            </tr>
-            <tr>
-                <td colspan="3">Total PPS </td>
-                <td>202</td>
+                <th colspan="3">Horas Totales PPS </th>
+                <td>{{TotalHoras}}</td>
             </tr>
         </tbody>
     </table>
+    <div (click)="agregar()" *ngIf="!isFormPlan">
+        <button type="button" class="btn btn-primary">AGREGAR ACTIVIDAD</button>
+    </div>
+    <div *ngIf="isFormPlan">
+        <form action="" [formGroup]='formPlan' (ngSubmit)='agregarActividad()' #f='ngForm'>
+            <table>
+                <tr>
+                    <td class="col-2">
+                        <label for="inputFecha" class="form-label">Fecha </label>
+                        <input type="date" id="inputFecha" class="form-control" formControlName="fecha" [(ngModel)]="Actividad.fecha" name="fecha">
+                    </td>
+                    <td class="col-6">
+                        <label for="inputDesc" class="form-label">Descripcion </label>
+                        <input type="text" id="inputDesc" class="form-control" formControlName="descripcion" [(ngModel)]="Actividad.descripcion" name="descripcion">
+                    </td>
+                    <td class="col-2">
+                        <label for="inputHorasP" class="form-label">Horas Parciales</label>
+                        <input type="number" id="inputHorasP" class="form-control" formControlName="horasP" [(ngModel)]="Actividad.horasParciales" name="horasParciales">
+                    </td>
+                    <td class="col-2">
+                        <button type="submit" class="btn btn-success">Guardar</button>
+                        <button type="button" class="btn btn-danger" (click)="isFormPlan = !isFormPlan">Cancelar</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+    </div>
     <form style="border: black 1px solid;">
         <p>Desea Enviar Plan de Trabajo ? </p>
         <input type="submit" value="Enviar" style="background-color: white; background: cadetblue;">

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Usuario } from 'src/app/model/Usuario';
+import { UsuarioService } from './usuario.service';
 
 @Component({
   selector: 'app-alta-usuario',
@@ -12,7 +13,7 @@ export class AltaUsuarioComponent implements OnInit {
 formAltaUsuario: FormGroup;
 user: Usuario = {legajo: '', password: '', nombre: '', apellido: '', email: '', dni: '',
  cellphone: '', localidad: '', direccion: '', cp: '', tipo: '' };
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, private usuarioService: UsuarioService) {
     this.formAltaUsuario = this.formBuilder.group({
       nombre: [''],
       apellido: [''],
