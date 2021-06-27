@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './shared/home/home.component';
 import { HeaderComponent } from './shared/header/header.component';
-import { FooterComponent } from './shared/footer/footer.component';
 import { PlaTrabajoComponent } from './shared/pla-trabajo/pla-trabajo.component';
 import { SolInicioComponent } from './shared/sol-inicio/sol-inicio.component';
 
@@ -22,7 +21,6 @@ import { LoginComponent } from './shared/login/login.component';
     AppComponent,
     HomeComponent,
     HeaderComponent,
-    FooterComponent,
     PlaTrabajoComponent,
     SolInicioComponent,
     ActaFinComponent,
