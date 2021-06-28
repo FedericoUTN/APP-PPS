@@ -3,7 +3,7 @@
     width: 94%;
 }
 .menu{
-    min-height: 80vh;
+    min-height: 70vh;
 }
 h1{
     padding-top: 50px !important ;
@@ -45,7 +45,7 @@ h1{
 
 footer {
     background-color: #2d2d2a;
-    height: 20%;
+    height: 100px;
     width: 100%;
     }
 
