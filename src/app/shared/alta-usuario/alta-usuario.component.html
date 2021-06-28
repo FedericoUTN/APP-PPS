@@ -19,7 +19,7 @@
             </div>
             <div class="mb-3 px-3">
                 <label for="InputPassword" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" name="password" id="InputPassword" formControlName="contraseña" [(ngModel)]="user.password" name="contraseña">
+                <input type="password" class="form-control" name="password" id="InputPassword" formControlName="contraseña" [(ngModel)]="user.pass" name="contraseña">
             </div>
             <div class="form-check mb-3 px-5">
                 <input class="form-check-input" type="radio" name="RadioInput" id="InputStudent" checked value='Estudiante' formControlName="tipo" [(ngModel)]="user.tipo" name="tipo">
@@ -36,4 +36,17 @@
             <button type="submit " class="btn btn-primary">Registrarse</button>
         </div>
     </form>
+    <br>
+    <div *ngFor="let u of usuarios">
+        <table>
+            <tr>
+                <th>legajo</th>
+                <td>{{u.legajo}}</td>
+            </tr>
+            <tr>
+                <th>nombre</th>
+                <td>{{u.nombre}}</td>
+            </tr>
+        </table>
+    </div>
 </div>

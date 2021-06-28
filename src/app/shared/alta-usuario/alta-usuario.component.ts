@@ -11,8 +11,9 @@ import { UsuarioService } from './usuario.service';
 export class AltaUsuarioComponent implements OnInit {
 
 formAltaUsuario: FormGroup;
-user: Usuario = {legajo: '', password: '', nombre: '', apellido: '', email: '', dni: '',
+user: Usuario = {legajo: '', pass: '', nombre: '', apellido: '', email: '', dni: '',
  cellphone: '', localidad: '', direccion: '', cp: '', tipo: '' };
+ usuarios: Array<Usuario> = [];
   constructor(private formBuilder: FormBuilder, private usuarioService: UsuarioService) {
     this.formAltaUsuario = this.formBuilder.group({
       nombre: [''],
@@ -26,9 +27,32 @@ user: Usuario = {legajo: '', password: '', nombre: '', apellido: '', email: '', 
    }
 
   ngOnInit(): void {
+
+
   }
   save(): void {
   console.log(this.user);
+  this.altaUsuario();
+
+  }
+
+  altaUsuario(): any{
+    let actualUser = new Usuario('', '',  '',  '', '',  '',
+     '', '', '', '', '');
+    actualUser = Object.assign({}, this.user);
+    this.usuarioService.createUsuario(actualUser).subscribe( (datos: { resultado: string; mensaje: any; }) => {
+        if (datos.resultado === 'OK'){
+          alert(datos.mensaje);
+        }
+      }
+    );
+  }
+  mostrarUsuarios(): void{
+    this.usuarioService.getAllUsuarios().subscribe(
+      (      result: Array<Usuario>) => {
+        this.usuarios = result;
+      }
+    );
   }
 
 }

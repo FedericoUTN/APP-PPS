@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {map} from 'rxjs/operators';
+import { Usuario } from 'src/app/model/Usuario';
 
 
 
@@ -8,14 +9,14 @@ import {map} from 'rxjs/operators';
   providedIn: 'root'
 })
 export class UsuarioService {
-
+  URL = 'http://localhost/server/';
 
   constructor(private http: HttpClient) { }
 
-  createUsuario(): void{
-
+  createUsuario(usuario: Usuario): any{
+    return this.http.post(`${this.URL}createUsuario.php`, JSON.stringify(usuario), {responseType: 'text'});
   }
-  getUsuarios(): void{
-
-  }
+  getAllUsuarios(): any{
+    return this.http.get(`${this.URL}getallUsuarios.php`);
+}
 }
