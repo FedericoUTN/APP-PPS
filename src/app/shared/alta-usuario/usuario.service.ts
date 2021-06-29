@@ -16,7 +16,8 @@ export class UsuarioService {
   createUsuario(usuario: Usuario): any{
     return this.http.post(`${this.URL}createUsuario.php`, JSON.stringify(usuario), {responseType: 'text'});
   }
-  getAllUsuarios(): any{
+  // tslint:disable-next-line:typedef
+  getAllUsuarios(){
     return this.http.get(`${this.URL}getallUsuarios.php`);
 }
 }

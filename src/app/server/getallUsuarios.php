@@ -1,8 +1,8 @@
 <?php 
-require 'db.php';
+  header('Content-Type: application/json');
   header('Access-Control-Allow-Origin: *'); 
   header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
-  
+  require 'db.php';
    // IMPORTA EL ARCHIVO CON LA CONEXION A LA DB
 
 
@@ -17,9 +17,9 @@ require 'db.php';
   };
   
   $json = json_encode($datos); // GENERA EL JSON CON LOS DATOS OBTENIDOS
-  
+  mysqli_close($conn);
   echo $json; // MUESTRA EL JSON GENERADO
   
-  header('Content-Type: application/json');
-  mysqli_close($conn);
+  
+ 
 ?>

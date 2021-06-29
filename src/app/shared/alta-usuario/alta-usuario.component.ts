@@ -33,7 +33,7 @@ user: Usuario = {legajo: '', pass: '', nombre: '', apellido: '', email: '', dni:
   save(): void {
   console.log(this.user);
   this.altaUsuario();
-
+  this.mostrarUsuarios();
   }
 
   altaUsuario(): any{
@@ -49,8 +49,8 @@ user: Usuario = {legajo: '', pass: '', nombre: '', apellido: '', email: '', dni:
   }
   mostrarUsuarios(): void{
     this.usuarioService.getAllUsuarios().subscribe(
-      (      result: Array<Usuario>) => {
-        this.usuarios = result;
+      (      result: any ) => {
+        this.usuarios.push(result);
       }
     );
   }
