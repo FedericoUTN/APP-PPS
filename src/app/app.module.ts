@@ -15,6 +15,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatBadgeModule} from '@angular/material/badge';
 import { AltaUsuarioComponent } from './shared/alta-usuario/alta-usuario.component';
 import { LoginComponent } from './shared/login/login.component';
+import { HttpClientModule } from '@angular/common/http';
+import { SeguimientoComponent } from './shared/seguimiento/seguimiento.component';
+
 
 
 @NgModule({
@@ -28,6 +31,7 @@ import { LoginComponent } from './shared/login/login.component';
     ActaFinComponent,
     AltaUsuarioComponent,
     LoginComponent,
+    SeguimientoComponent,
 
   ],
   imports: [
@@ -36,7 +40,8 @@ import { LoginComponent } from './shared/login/login.component';
     RouterModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MatBadgeModule
+    MatBadgeModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

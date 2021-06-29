@@ -1,0 +1,31 @@
+<div class="container">
+  <h2 class="titulos">
+      Seguimiento Semanal de la PPS</h2>
+  <form [formGroup]='formSeguimiento' (ngSubmit)='enviar()' #f='ngForm'>
+
+      <h3 class="subtitulos">Desvíos de Cronograma</h3>
+      <label for="formText1" class="form-label"><h3 class="subtitulos">Comparación de las actividades planificadas con las realizadas durante esta semana.</h3></label>
+      <textarea class="form-control mt-2" id='formText1' formControlName="text1" [(ngModel)]="seguimiento.text1" name="text1"></textarea>
+
+      <h3 class="subtitulos">Actividades Realizadas</h3>
+      <label for="formText2" class="form-label"><h3 class="subtitulos">Descripción y detalles de las tareas realizadas durante la semana descripta.</h3></label>
+      <textarea class="form-control mt-2" id='formText2' formControlName="text2" [(ngModel)]="seguimiento.text2" name="text2"></textarea>
+
+      <h3 class="subtitulos">Próximas Actividades</h3>
+      <label for="formText3" class="form-label"><h3 class="subtitulos">Actividades que llevarás a cabo la semana próxima.</h3></label>
+      <textarea class="form-control mt-2" id='formText3' formControlName="text3" [(ngModel)]="seguimiento.text3" name="text3"></textarea>
+
+      <h3 class="subtitulos">Cuestiones Pendientes</h3>
+      <label for="formText4" class="form-label"><h3 class="subtitulos">Tareas que fueron planificadas y que no fueron concretadas esta semana.</h3></label>
+      <textarea class="form-control mt-2" id='formText4' formControlName="text4" [(ngModel)]="seguimiento.text4" name="text4"></textarea>
+
+      <h3 class="subtitulos">Experiencias, Complicaciones y Obtáculos</h3>
+      <label for="formText5" class="form-label"><h3 class="subtitulos">Otros detalles sobre tu experiencia, reflexiones, y aprendizajes semanales.</h3></label>
+      <textarea class="form-control mt-2" id='formText5' formControlName="text5" [(ngModel)]="seguimiento.text5" name="text5"></textarea>
+      <br>
+      <div>
+          <button type="submit" class="btn btn-primary">Guardar</button>
+      </div>
+  </form>
+
+</div>

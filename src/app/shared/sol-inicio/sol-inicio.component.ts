@@ -10,7 +10,7 @@ import { Usuario } from 'src/app/model/Usuario';
 })
 export class SolInicioComponent implements OnInit {
   formSolicitud: FormGroup;
-  user: Usuario = {legajo: '', password: '', nombre: '', apellido: '', email: '', dni: '', cellphone: '', localidad: '', direccion: '', cp: '' };
+  user: Usuario = {legajo: '', password: '', nombre: '', apellido: '', email: '', dni: '', cellphone: '', localidad: '', direccion: '', cp: '' ,tipo:''};
   nullDate = new Date(0);
   solicitud: SolicitudInicio = {fechaIncial: this.nullDate, caracteristicas: '', docenteTutor: ''};
   empresa: Empresa = {nombre: '', direccion: '', localidad: '', telefono: '', codigoPostal: '', email: '', personaContacto: ''};
