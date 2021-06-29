@@ -1,62 +1,108 @@
-<div class="container">
-
-    <h1 class="text-center">Plan de Trabajo</h1>
-    <p class="text-end">
-        <button type="Submit">Informacion</button>
-    </p>
-    <h2>Nombre de la empresa</h2>
-    <h3>Objetivos del proyecto a realizar</h3>
-    <form>
+<div class="container-fluid planTrabajo py-5">
+    <div class="container pagina py-5 px-5">
+      <h1 class="text-center ">PLAN DE TRABAJO</h1>
+      <p class="text-end"></p>
+      <h2>Nombre de la empresa: LTA S.A.</h2>
+      <h3>Objetivos del proyecto a realizar</h3>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid
+        reiciendis quis accusantium blanditiis! At blanditiis, ad fugiat similique
+        cumque obcaecati aliquam minima ullam, quos qui voluptas ipsa officiis
+        dolorem aperiam.
+      </p>
+      <form>
         <div class="row">
-            <div class="col-4"><label for="solFormDate" class="form-label">Fecha : </label><input id="solFormDate" type="date" class="form-control"></div>
-            <div class="col-3">
-                <small>----</small><button class="btn btn-outline-primary ">Generar</button></div>
+          <div class="col-4">
+            <label for="solFormDate" class="form-label">Fecha : </label
+            ><input id="solFormDate" type="date" class="form-control" />
+            <br /><button class="btn btn-outline-primary">Generar</button>
+          </div>
         </div>
-    </form>
-
-    <table class="table-primary table">
-        <tr>
-            <td>Fecha</td>
-            <td>Descripccion</td>
-            <td>Horas Parciales</td>
-            <td>Horas Totales</td>
-            <td>Estado</td>
-            <td>Documento</td>
-        </tr>
-        <tr>
-            <td>07/05/21</td>
-            <td>Primera entrega</td>
-            <td>12</td>
-            <td>12</td>
-            <td>Aprobado</td>
-            <td><a href="#" target="_blank">Click Aqui</a></td>
-        </tr>
-        <tr>
-            <td>14/05/21</td>
-            <td>Segunda entrega</td>
-            <td>12</td>
-            <td>24</td>
-            <td>Pendiente</td>
-            <td><a href="#" target="_blank">Click Aqui</a></td>
-        </tr>
-    </table>
-    <br>
-    <br>
-    <span><a href="#" target="_blank">Enviar Mensaje</a></span>
-    <span><a href="#" target="_blank">Poner nota</a></span>
-    <table class="borde text-end">
-        <tr>
-            <td>Crear Linea</td>
-            <td>Borrar ultima Linea</td>
-        </tr>
-    </table>
-    <br>
-    <br>
-    <p>--------------------------------------------------------------------Ultimos Movimientos---------------------------------------------------------------------------------------------------------------------------------------</p>
-    <br>
-    <span> Nota del Administrador  </span>
-    <br>
-    <br>
-    <button value="Volver Atras">Volver</button>
-
-</div>
+      </form>
+      <br />
+      <div class="container">
+        <table class="table-striped table table-bordered">
+          <thead>
+            <tr>
+              <td>Fecha</td>
+              <td>Descripccion</td>
+              <td>Horas Parciales</td>
+              <td>Horas Totales</td>
+              <td>Estado</td>
+              <td>Documento</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>07/05/21</td>
+              <td>Conocer la Empresa</td>
+              <td>12</td>
+              <td>12</td>
+              <td>Aprobado</td>
+              <input type="file" class="form-control" />
+            </tr>
+            <tr>
+              <td>14/05/21</td>
+              <td>Instalacion De Software</td>
+              <td>12</td>
+              <td>24</td>
+              <td>Pendiente</td>
+              <input type="file" class="form-control" />
+            </tr>
+            <tr>
+              <td>14/05/21</td>
+              <td>Desarrollo Pagina Web</td>
+              <td>13</td>
+              <td>14</td>
+              <td>Pendiente</td>
+              <input type="file" class="form-control" />
+            </tr>
+            <tr>
+              <td>14/05/21</td>
+              <td>Testeo Pagina Web</td>
+              <td>10</td>
+              <td>15</td>
+              <td>Pendiente</td>
+              <input type="file" class="form-control" />
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  
+      <br />
+      <br />
+      <button class="btn btn-primary" id="enviarMensaje">Enviar Mensaje</button>
+      <button class="btn btn-primary">Poner Nota</button>
+  
+      <br />
+      <br />
+      <p class="text-center">Ultimos movimientos</p>
+      <div class="comentarios container border">
+        <br />
+        <div class="comentario py-2 px-2">
+          <span><strong>Nota del Responsable: </strong> </span>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
+            nisi aut fuga veniam quia, adipisci molestiae sunt possimus sed?
+            Dignissimos laudantium voluptate ad a nulla neque. Optio quibusdam
+            voluptate ut.
+          </p>
+        </div>
+        <br />
+        <div class="comentario py-2 px-2">
+          <span><strong>Nota del Tutor: </strong> </span>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod magni
+            numquam ut rerum fuga adipisci quibusdam sed necessitatibus laborum
+            velit sint, veniam accusamus fugiat, et sapiente eum vitae pariatur
+            neque.
+          </p>
+        </div>
+  
+        <br />
+        <br />
+      </div>
+      <button value="Volver Atras" class="btn btn-secondary mt-2"  routerLink="/home">Volver</button>
+    </div>
+  </div>
+  

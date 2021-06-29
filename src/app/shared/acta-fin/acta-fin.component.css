@@ -1,5 +1,13 @@
-.titulos {
-    background-color: #ffc93c;
+.container-fluid{
+    background-color: #1ab6b6ea;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.container{
+    background-color: white;
+    border-radius: 5px;
+    border-color: black;
+    background-color: white;
 }
 
 .subtitulos {
