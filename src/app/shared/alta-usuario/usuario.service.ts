@@ -23,5 +23,11 @@ export class UsuarioService {
   deleteUsuario(legajo: string): any{
     return this.http.get(`${this.URL}deleteUsuario.php?legajo=${legajo}`);
   }
+  seleccionarUsuario(legajo: string): any {
+    return this.http.get(`${this.URL}getUsuario.php?legajo=${legajo}`, {responseType: 'text'});
+  }
+  editarUsuario(usuario: Usuario): any {
+    return this.http.post(`${this.URL}updateUsuario.php`, JSON.stringify(usuario));
+  }
 
 }

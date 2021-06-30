@@ -31,7 +31,7 @@
                 <td>{{user.cp}}</td>
                 <td>{{user.tipo}}</td>
                 <td>
-                    <button class="btn btn-light">...</button>
+                    <button class="btn btn-light" (click)="seleccionarUsuario(user.legajo)">...</button>
 
                 </td>
                 <td>
@@ -42,4 +42,97 @@
         </tbody>
 
     </table>
+    <hr>
+    <h2>Editar usuario</h2>
+    <form action="" [formGroup]='formEditUsuario' (ngSubmit)='editarUsuario()' #f='ngForm'>
+        <div class="row align-items-center">
+            <div class="col-3">
+                <label class="form-label">Legajo </label>
+            </div>
+            <div class="col-3">
+                <input type="text" class="form-control" formControlName="legajo" [(ngModel)]="usuario.legajo" readonly>
+            </div>
+            <div class="col-3">
+                <label for="inputContraseña" class="form-label">Contraseña </label>
+            </div>
+            <div class="col-3">
+                <input type="text" class="form-control" formControlName="pass" [(ngModel)]="usuario.pass" id="inputContraseña" name="pass">
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-3">
+                <label for="inputNombre " class="form-label">Nombre </label>
+            </div>
+            <div class="col-3">
+                <input type="text" class="form-control" formControlName="nombre" [(ngModel)]="usuario.nombre" id="inputNombre " name="nombre">
+            </div>
+            <div class="col-3">
+                <label for="inputApellido" class="form-label">Apellido </label>
+            </div>
+            <div class="col-3">
+                <input type="text" class="form-control" formControlName="apellido" [(ngModel)]="usuario.apellido" id="inputApellido" name="apellido">
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-3">
+                <label for="inputEmail " class="form-label">Email </label>
+            </div>
+            <div class="col-3">
+                <input type="text" class="form-control" formControlName="email" [(ngModel)]="usuario.email" id="inputEmail " name="email">
+            </div>
+            <div class="col-3">
+                <label for="inputDni" class="form-label">Dni </label>
+            </div>
+            <div class="col-3">
+                <input type="text" class="form-control" formControlName="dni" [(ngModel)]="usuario.dni" id="inputDni" name="dni">
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-3">
+                <label for="inputCell " class="form-label">Numero de celular </label>
+            </div>
+            <div class="col-3">
+                <input type="text" class="form-control" formControlName="cellphone" [(ngModel)]="usuario.cellphone" id="inputCell  " name="cellphone">
+            </div>
+            <div class="col-3">
+                <label for="inputLocalidad" class="form-label">Localidad</label>
+            </div>
+            <div class="col-3">
+                <input type="text" class="form-control" formControlName="localidad" [(ngModel)]="usuario.localidad" id="inputLocalidad" name="localidad">
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-3">
+                <label for="inputDireccion " class="form-label">Direccion </label>
+            </div>
+            <div class="col-3">
+                <input type="text" class="form-control" formControlName="direccion" [(ngModel)]="usuario.direccion" id="inputDireccion  " name="direccion">
+            </div>
+            <div class="col-3">
+                <label for="inputCP" class="form-label">Codigo postal</label>
+            </div>
+            <div class="col-3">
+                <input type="text" class="form-control" formControlName="cp" [(ngModel)]="usuario.cp" id="inputCP" name="cp">
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-3">
+                <label for="inputTipo " class="form-label">Tipo </label>
+            </div>
+            <div class="col-9">
+                <select class="form-select" aria-label="Default select example" formControlName="tipo" [(ngModel)]="usuario.tipo" id="inputTipo " name="tipo">
+                    <option selected></option>
+                    <option value="Estudiante">Estudiante</option>
+                    <option value="Profesor">Profesor</option>
+                    <option value="Responsable">Responsable</option>
+                  </select>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                <button type="reset" class="btn btn-danger">Cancelar</button>
+            </div>
+        </div>
+    </form>
 </div>
