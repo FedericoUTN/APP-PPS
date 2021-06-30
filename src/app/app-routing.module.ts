@@ -3,6 +3,7 @@ import {RouterModule, Routes} from '@angular/router';
 import { ActaFinComponent } from './shared/acta-fin/acta-fin.component';
 import { AltaUsuarioComponent } from './shared/alta-usuario/alta-usuario.component';
 import { HomeComponent } from './shared/home/home.component';
+import { ListarUsuariosComponent } from './shared/listar-usuarios/listar-usuarios.component';
 import { LoginComponent } from './shared/login/login.component';
 import { PlaTrabajoComponent } from './shared/pla-trabajo/pla-trabajo.component';
 import { SeguimientoComponent } from './shared/seguimiento/seguimiento.component';
@@ -16,6 +17,7 @@ const routes: Routes = [
     {path: 'login', component: LoginComponent},
     {path: 'altaUsuario', component: AltaUsuarioComponent},
     {path: 'seguimientos', component: SeguimientoComponent},
+    {path: 'listaUsuarios', component: ListarUsuariosComponent},
     {path: '**', pathMatch: 'full', redirectTo: 'home'}
 ];
 

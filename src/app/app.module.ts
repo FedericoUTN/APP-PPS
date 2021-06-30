@@ -17,6 +17,7 @@ import { AltaUsuarioComponent } from './shared/alta-usuario/alta-usuario.compone
 import { LoginComponent } from './shared/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SeguimientoComponent } from './shared/seguimiento/seguimiento.component';
+import { ListarUsuariosComponent } from './shared/listar-usuarios/listar-usuarios.component';
 
 
 
@@ -32,6 +33,7 @@ import { SeguimientoComponent } from './shared/seguimiento/seguimiento.component
     AltaUsuarioComponent,
     LoginComponent,
     SeguimientoComponent,
+    ListarUsuariosComponent,
 
   ],
   imports: [

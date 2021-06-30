@@ -16,8 +16,12 @@ export class UsuarioService {
   createUsuario(usuario: Usuario): any{
     return this.http.post(`${this.URL}createUsuario.php`, JSON.stringify(usuario), {responseType: 'text'});
   }
-  // tslint:disable-next-line:typedef
-  getAllUsuarios(){
-    return this.http.get(`${this.URL}getallUsuarios.php`);
+  getAllUsuarios(): any{
+    console.log('todo bien aca getallusuario');
+    return this.http.get(`${this.URL}getallUsuarios.php`, {responseType: 'text'});
 }
+  deleteUsuario(legajo: string): any{
+    return this.http.get(`${this.URL}deleteUsuario.php?legajo=${legajo}`);
+  }
+
 }

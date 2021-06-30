@@ -14,6 +14,7 @@ formAltaUsuario: FormGroup;
 user: Usuario = {legajo: '', pass: '', nombre: '', apellido: '', email: '', dni: '',
  cellphone: '', localidad: '', direccion: '', cp: '', tipo: '' };
  usuarios: Array<Usuario> = [];
+
   constructor(private formBuilder: FormBuilder, private usuarioService: UsuarioService) {
     this.formAltaUsuario = this.formBuilder.group({
       nombre: [''],
@@ -33,7 +34,6 @@ user: Usuario = {legajo: '', pass: '', nombre: '', apellido: '', email: '', dni:
   save(): void {
   console.log(this.user);
   this.altaUsuario();
-  this.mostrarUsuarios();
   }
 
   altaUsuario(): any{
@@ -47,12 +47,6 @@ user: Usuario = {legajo: '', pass: '', nombre: '', apellido: '', email: '', dni:
       }
     );
   }
-  mostrarUsuarios(): void{
-    this.usuarioService.getAllUsuarios().subscribe(
-      (      result: any ) => {
-        this.usuarios.push(result);
-      }
-    );
-  }
+
 
 }

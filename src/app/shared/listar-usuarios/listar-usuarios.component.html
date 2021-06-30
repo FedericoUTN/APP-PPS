@@ -1,0 +1,45 @@
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Legajo</th>
+                <th scope="col">Contraseña</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Email</th>
+                <th scope="col">Dni</th>
+                <th scope="col">Cellphone</th>
+                <th scope="col">Localidad</th>
+                <th scope="col">Direccion</th>
+                <th scope="col">CP</th>
+                <th scope="col">Tipo</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of usuarios">
+                <td>{{user.legajo}}</td>
+                <td>{{user.pass}}</td>
+                <td>{{user.nombre}}</td>
+                <td>{{user.apellido}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.dni}}</td>
+                <td>{{user.cellphone}}</td>
+                <td>{{user.localidad}}</td>
+                <td>{{user.direccion}}</td>
+                <td>{{user.cp}}</td>
+                <td>{{user.tipo}}</td>
+                <td>
+                    <button class="btn btn-light">...</button>
+
+                </td>
+                <td>
+                    <button class="btn btn-danger" (click)="bajaUsuario(user.legajo)">X</button>
+                </td>
+            </tr>
+
+        </tbody>
+
+    </table>
+</div>
