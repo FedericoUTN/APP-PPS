@@ -1,3 +1,22 @@
-.borde {
-    border: 1px;
+.planTrabajo {
+    background-color: #ff9914ce;
+}
+
+.pagina {
+    background-color: white;
+    border-radius: 20px;
+}
+
+#enviarMensaje {
+    margin-right: 10px;
+}
+
+.comentario {
+    background-color: white;
+    border-radius: 5px;
+}
+
+.comentarios {
+    background-color: rgba(128, 128, 128, 0.274);
+    border-radius: 5px;
 }

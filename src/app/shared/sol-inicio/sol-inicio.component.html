@@ -1,12 +1,12 @@
 <form [formGroup]="formSolicitud" (ngSubmit)="save()" #f="ngForm" class="formulario">
-    <div class="container">
+    <div class="container py-4 px-5">
         <div id="title">
             <h1 class="text-center my-4">
                 <b>SOLICITUD DE INICIO</b>
             </h1>
         </div>
         <h3 class="mb-3 subTitle text-center"><u><strong> Ingrese sus datos personales</strong></u></h3>
-        <div class="table-responsive cuerpoForm">
+        <div class="table-responsive cuerpoForm px-3">
             <table class="table table-striped table-borderless table-bordered">
                 <tr>
                     <th><label for="solFormName">Nombre:</label></th>
@@ -49,9 +49,8 @@
                     </td>
                 </tr>
             </table>
-            <hr />
         </div>
-        <div class="cuerpoForm">
+        <div class="cuerpoForm px-3 pb-4">
             <h4 class="mb-3"><u>Fecha de Solicitud Inicial</u></h4>
             <label for="solFormFN">Fecha de comienzo</label>
             <input type="date" id="solFormFN" class="form-control" formControlName="fechaC" [(ngModel)]="solicitud.fechaIncial" name="fechaC" />
@@ -63,13 +62,13 @@
             <h4 class="mb-3"><u>Docente Tutor</u></h4>
             <label for="solFormTutor">Docente Tutor</label>
             <input type="text" id="solFormTutor" class="form-control" formControlName="docenteTutor" [(ngModel)]="solicitud.docenteTutor" name="docenteTutor" />
-            <hr />
-            <h4 class="mb-3 subTitle">
-                <u>Datos de la Entidad/Organizacion/Institucion</u>
-            </h4>
+
         </div>
 
-        <div class="table-responsive cuerpoForm">
+        <div class="table-responsive cuerpoForm px-3 pb-4">
+            <h4 class="mb-3 ">
+                <u>Datos de la Entidad/Organizacion/Institucion</u>
+            </h4>
             <table class="table table-striped table-borderless table-bordered">
                 <tr>
                     <th><label for="solFormNameE">Nombre de la empresa:</label></th>
@@ -111,6 +110,7 @@
             <hr />
             <label for="solFormAC">Agregar Certificado</label>
             <input type="file" id="solFormAC" class="form-control" />
+            <br>
             <p>Para poder realizar las PPS debe:</p>
             <ul>
                 <li>
@@ -119,6 +119,7 @@
                 <li>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus est distinctio consectetur placeat praesentium facere quasi quisquam sapiente es
                 </li>
+
             </ul>
             <p>Nombre :{{ user.nombre }}</p>
             <p>Apellido :{{ user.apellido }}</p>
@@ -133,17 +134,20 @@
           </button>
             </div>
 
-
-            <button type="button" class="btn btn-link">Enviar Mensaje</button>
-            <button type="button" class="btn btn-link">Poner Nota</button>
-            <ul>
-                <li>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi expedita magnam repudiandae laudantium quia sit vel blanditiis fugit ver
-                </li>
-                <li>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus est distinctio consectetur placeat praesentium facere quasi quisquam sapiente es
-                </li>
-            </ul>
+            <!--    <button type="button" class="btn btn-link">Enviar Mensaje</button>
+        <button type="button" class="btn btn-link">Poner Nota</button>
+        <ul>
+          <li>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi
+            expedita magnam repudiandae laudantium quia sit vel blanditiis fugit
+            ver
+          </li>
+          <li>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+            est distinctio consectetur placeat praesentium facere quasi quisquam
+            sapiente es
+          </li>
+        </ul> -->
         </div>
     </div>
 </form>

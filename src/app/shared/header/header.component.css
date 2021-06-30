@@ -1,12 +1,12 @@
 header {
     background-color: #2d2d2a;
-    height: 10%;
+    height: 90px;
     position: -webkit-sticky;
     position: sticky;
     top: 0px;
 }
 
-.mt-1 {
+.mt-4 {
     cursor: pointer;
 }
 

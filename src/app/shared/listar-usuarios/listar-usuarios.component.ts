@@ -64,9 +64,9 @@ export class ListarUsuariosComponent implements OnInit {
         (        datos: { resultado: string; mensaje: any; }) => {
           if (datos.resultado === 'OK') {
             alert(datos.mensaje);
-            this.mostrarUsuarios();
           }
         }
       );
+      this.mostrarUsuarios();
     }
 }

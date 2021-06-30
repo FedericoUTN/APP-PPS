@@ -5,7 +5,6 @@
 }
 
 .container {
-    border-style: solid;
     border-radius: 5px;
     border-color: black;
     background-color: white;
@@ -17,6 +16,8 @@
 
 .cuerpoForm {
     background-color: #e1e5ea;
+    margin-bottom: 20px;
+    padding-top: 10px;
 }
 
 .subTitle {

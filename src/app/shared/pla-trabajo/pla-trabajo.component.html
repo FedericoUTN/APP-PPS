@@ -1,70 +1,104 @@
-<div class="container">
-
-    <h1>Aqui podras cargar tu plan de trabajo.</h1>
-    <p>Una vez enviado, el docente lo evaluara y aprobara. Caso contrario, te lo devolvera con las correcciones necesarias.</p>
-
-    <p>Completar la siguiente tabla</p>
-    <table class="borde table">
-
-        <thead>
+<div class="container-fluid planTrabajo py-5">
+    <div class="container pagina py-5 px-5">
+        <h1 class="text-center ">PLAN DE TRABAJO</h1>
+        <p class="text-end"></p>
+        <h2>Nombre de la empresa: LTA S.A.</h2>
+        <h3>Objetivos del proyecto a realizar</h3>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid reiciendis quis accusantium blanditiis! At blanditiis, ad fugiat similique cumque obcaecati aliquam minima ullam, quos qui voluptas ipsa officiis dolorem aperiam.
+        </p>
+        <form>
+            <div class="row">
+                <div class="col-4">
+                    <label for="solFormDate" class="form-label">Fecha : </label
+            ><input id="solFormDate" type="date" class="form-control" />
+            <br /><button class="btn btn-outline-primary">Generar</button>
+          </div>
+        </div>
+      </form>
+      <br />
+      <div class="container">
+        <table class="table-striped table table-bordered">
+          <thead>
             <tr>
-                <th scope="col">Fecha</th>
-                <th scope="col">Descripcion</th>
-                <th scope="col">Hs.Parciales</th>
-                <th scope="col">Hs. Totales</th>
+              <td>Fecha</td>
+              <td>Descripccion</td>
+              <td>Horas Parciales</td>
+              <td>Horas Totales</td>
+              <td>Estado</td>
+              <td>Documento</td>
             </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let act of PlanTrabajo">
-                <td>{{act.fecha}}</td>
-                <td>{{act.descripcion}}</td>
-                <td>{{act.horasParciales}}</td>
-                <td>{{act.hotasTotales}}</td>
-            </tr>
-
-
-
-
-
+          </thead>
+          <tbody>
             <tr>
-                <th colspan="3">Horas Totales PPS </th>
-                <td>{{TotalHoras}}</td>
+              <td>07/05/21</td>
+              <td>Conocer la Empresa</td>
+              <td>12</td>
+              <td>12</td>
+              <td>Aprobado</td>
+              <input type="file" class="form-control" />
             </tr>
-        </tbody>
-    </table>
-    <div (click)="agregar()" *ngIf="!isFormPlan">
-        <button type="button" class="btn btn-primary">AGREGAR ACTIVIDAD</button>
+            <tr>
+              <td>14/05/21</td>
+              <td>Instalacion De Software</td>
+              <td>12</td>
+              <td>24</td>
+              <td>Pendiente</td>
+              <input type="file" class="form-control" />
+            </tr>
+            <tr>
+              <td>14/05/21</td>
+              <td>Desarrollo Pagina Web</td>
+              <td>13</td>
+              <td>14</td>
+              <td>Pendiente</td>
+              <input type="file" class="form-control" />
+            </tr>
+            <tr>
+              <td>14/05/21</td>
+              <td>Testeo Pagina Web</td>
+              <td>10</td>
+              <td>15</td>
+              <td>Pendiente</td>
+              <input type="file" class="form-control" />
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  
+      <br />
+      <br />
+      <button class="btn btn-primary" id="enviarMensaje">Enviar Mensaje</button>
+      <button class="btn btn-primary">Poner Nota</button>
+  
+      <br />
+      <br />
+      <p class="text-center">Ultimos movimientos</p>
+      <div class="comentarios container border">
+        <br />
+        <div class="comentario py-2 px-2">
+          <span><strong>Nota del Responsable: </strong> </span>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
+            nisi aut fuga veniam quia, adipisci molestiae sunt possimus sed?
+            Dignissimos laudantium voluptate ad a nulla neque. Optio quibusdam
+            voluptate ut.
+          </p>
+        </div>
+        <br />
+        <div class="comentario py-2 px-2">
+          <span><strong>Nota del Tutor: </strong> </span>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod magni
+            numquam ut rerum fuga adipisci quibusdam sed necessitatibus laborum
+            velit sint, veniam accusamus fugiat, et sapiente eum vitae pariatur
+            neque.
+          </p>
+        </div>
+  
+        <br />
+        <br />
+      </div>
+      <button value="Volver Atras" class="btn btn-secondary mt-2"  routerLink="/home">Volver</button>
     </div>
-    <div *ngIf="isFormPlan">
-        <form action="" [formGroup]='formPlan' (ngSubmit)='agregarActividad()' #f='ngForm'>
-            <table>
-                <tr>
-                    <td class="col-2">
-                        <label for="inputFecha" class="form-label">Fecha </label>
-                        <input type="date" id="inputFecha" class="form-control" formControlName="fecha" [(ngModel)]="Actividad.fecha" name="fecha">
-                    </td>
-                    <td class="col-6">
-                        <label for="inputDesc" class="form-label">Descripcion </label>
-                        <input type="text" id="inputDesc" class="form-control" formControlName="descripcion" [(ngModel)]="Actividad.descripcion" name="descripcion">
-                    </td>
-                    <td class="col-2">
-                        <label for="inputHorasP" class="form-label">Horas Parciales</label>
-                        <input type="number" id="inputHorasP" class="form-control" formControlName="horasP" [(ngModel)]="Actividad.horasParciales" name="horasParciales">
-                    </td>
-                    <td class="col-2">
-                        <button type="submit" class="btn btn-success">Guardar</button>
-                        <button type="button" class="btn btn-danger" (click)="isFormPlan = !isFormPlan">Cancelar</button>
-                    </td>
-                </tr>
-            </table>
-        </form>
-
-    </div>
-    <form style="border: black 1px solid;">
-        <p>Desea Enviar Plan de Trabajo ? </p>
-        <input type="submit" value="Enviar" style="background-color: white; background: cadetblue;">
-        <input type="submit" value="Guardar Borrador" style="background: white;">
-
-    </form>
-
-</div>
+  </div>

@@ -1,22 +1,22 @@
 <div class="container cuerpo">
     <h1 class="text-center">LOGIN DE USUARIO</h1>
     <img src="https://i.ibb.co/ChMPdQW/user.png" class="mx-auto d-block" alt="user image" />
-    <form action="" [formGroup]='formLogin' (ngSubmit)='save()' #f='ngForm'>
+    <form action="login.php" method="POST" [formGroup]='formLogin' (ngSubmit)='save()' #f='ngForm'>
         <div class="form-group">
             <div class="inp">
-                <label class="text-center" for="InputEmail">Correo Electronico</label>
-                <input type="email" class="form-control w-50" id="InputEmail" required="" formControlName='correo' [(ngModel)]='mail' name='correo' />
+                <label class="text-center" for="InputEmail">Legajo</label>
+                <input type="text" class="form-control w-50" id="InputLegajo" required="" formControlName='legajo' [(ngModel)]='legajo' name='legajo' />
             </div>
 
             <br />
             <div class="inp">
                 <label for="InputPassword">Contraseña</label>
-                <input type="email" class="form-control w-50" id="InputEmail" required="" formControlName='password' [(ngModel)]='pass' name='password' />
+                <input type="password" class="form-control w-50" id="InputPassword" required="" formControlName='password' [(ngModel)]='pass' name='password' />
             </div>
 
             <br />
             <div class="inp">
-                <button type="submit" class="btn btn-primary">Registrarse</button>
+                <button type="submit" class="btn btn-primary">Ingresar</button>
                 <a href="">Olvido su contraseña?</a>
             </div>
             <a class="nav-link active" routerLink="/altaUsuario">Nuevo usuario de PPS?</a>
