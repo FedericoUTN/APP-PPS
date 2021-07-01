@@ -69,36 +69,61 @@
       <br />
       <br />
       <button class="btn btn-primary" id="enviarMensaje">Enviar Mensaje</button>
-      <button class="btn btn-primary">Poner Nota</button>
+      <button class="btn btn-primary" (click)='agregar()'>Agregar Actividad</button>
   
       <br />
-      <br />
-      <p class="text-center">Ultimos movimientos</p>
-      <div class="comentarios container border">
-        <br />
-        <div class="comentario py-2 px-2">
-          <span><strong>Nota del Responsable: </strong> </span>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
-            nisi aut fuga veniam quia, adipisci molestiae sunt possimus sed?
-            Dignissimos laudantium voluptate ad a nulla neque. Optio quibusdam
-            voluptate ut.
-          </p>
-        </div>
-        <br />
-        <div class="comentario py-2 px-2">
-          <span><strong>Nota del Tutor: </strong> </span>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod magni
-            numquam ut rerum fuga adipisci quibusdam sed necessitatibus laborum
-            velit sint, veniam accusamus fugiat, et sapiente eum vitae pariatur
-            neque.
-          </p>
-        </div>
-  
-        <br />
-        <br />
-      </div>
-      <button value="Volver Atras" class="btn btn-secondary mt-2"  routerLink="/home">Volver</button>
+      <hr>
+      <div *ngIf="isFormPlan">
+        <h2>Actividad Nueva</h2>
+        <form action="login.php" method="POST" [formGroup]='formPlan' (ngSubmit)='agregarActividad()' #f='ngForm'>
+          <div class="row align-items-center">
+            <div class="col-auto">
+                <label for="inputNombre " class="form-label">Fecha </label>
+                </div>
+                <div class="col-3">
+                    <input type="date" class="form-control" formControlName="fecha" [(ngModel)]="Actividad.fecha" id="inputNombre " name="fecha">
+                </div>
+                <div class="col-auto">
+                    <label for="inputApellido" class="form-label">Descripcion </label>
+                </div>
+                <div class="col-3">
+                    <input type="text" class="form-control" formControlName="descripcion" [(ngModel)]="Actividad.descripcion" id="inputApellido" name="descripcion">
+                </div>
+                <div class="col-auto">
+                    <label for="inputApellido" class="form-label">Horas Parciales </label>
+                </div>
+                <div class="col-3">
+                    <input type="number" class="form-control" formControlName="horasP" [(ngModel)]="Actividad.horasParciales" id="inputApellido" name="horasP">
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-primary">Guardar Actividad</button>
+                </div>
+            </div>
+        </form>
     </div>
-  </div>
+    <br />
+    <p class="text-center">Ultimos movimientos</p>
+    <div class="comentarios container border">
+        <br />
+        <div class="comentario py-2 px-2">
+            <span><strong>Nota del Responsable: </strong> </span>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nisi aut fuga veniam quia, adipisci molestiae sunt possimus sed? Dignissimos laudantium voluptate ad a nulla neque. Optio quibusdam voluptate ut.
+            </p>
+        </div>
+        <br />
+        <div class="comentario py-2 px-2">
+            <span><strong>Nota del Tutor: </strong> </span>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod magni numquam ut rerum fuga adipisci quibusdam sed necessitatibus laborum velit sint, veniam accusamus fugiat, et sapiente eum vitae pariatur neque.
+            </p>
+        </div>
+
+        <br />
+        <br />
+    </div>
+    <button value="Volver Atras" class="btn btn-secondary mt-2" routerLink="/home">Volver</button>
+</div>
+</div>
