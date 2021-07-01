@@ -1,5 +1,6 @@
 #secciones{
-    width: 94%;
+    width: 100%;
+    padding-right: 5%;
 }
 .menu{
     min-height: calc(100vh - 190px);
@@ -15,21 +16,12 @@ h1{
     border: black 5px;
     min-height: 60%;
 
-}
-@media only screen and (max-width: 575px) {
-   .col-12{
-       margin-left: 6%;
+} @media only screen and (max-width: 575px) {
+   #secciones{
+       margin-bottom: 200px;
    }
   }
-/* .col-12 p{
-    font-size: 150%;
-}
-.col-12 li{
-    font-size: 120%;
-}
-.col-12 h2{
-    font-size: 180%;
-} */
+
 #solIni{
     background-color: #ff6a6a;
 }
