@@ -1,32 +1,61 @@
-<div class="container cuerpo">
+<div class="cuerpo py-5">
+  <div class="container">
     <h1 class="text-center">LOGIN DE USUARIO</h1>
-    <img src="https://i.ibb.co/ChMPdQW/user.png" class="mx-auto d-block" alt="user image" />
-    <form action="login.php" method="POST" [formGroup]='formLogin' (ngSubmit)='save()' #f='ngForm'>
-        <div class="form-group">
-            <div class="inp">
-                <label class="text-center" for="InputEmail">Legajo</label>
-                <input type="text" class="form-control w-50" id="InputLegajo" required="" formControlName='legajo' [(ngModel)]='legajo' name='legajo' />
-            </div>
-
-            <br />
-            <div class="inp">
-                <label for="InputPassword">Contraseña</label>
-                <input type="password" class="form-control w-50" id="InputPassword" required="" formControlName='password' [(ngModel)]='pass' name='password' />
-            </div>
-
-            <br />
-            <div class="inp row">
-                <div class="col-12"><button type="submit" class="btn btn-primary">Ingresar</button>
-                </div>
-                <div class="col-12">
-                    <a href="">Olvido su contraseña?</a>
-
-                </div>
-                <div class="col-12">
-                    <a class="nav-link active" routerLink="/altaUsuario">Nuevo usuario de PPS?</a>
-                </div>
-            </div>
-
+    <img
+      src="https://i.ibb.co/ChMPdQW/user.png"
+      class="mx-auto d-block"
+      alt="imagen de usuario"
+    />
+    <form
+      action="login.php"
+      method="POST"
+      [formGroup]="formLogin"
+      (ngSubmit)="save()"
+      #f="ngForm"
+    >
+      <div class="form-group">
+        <div class="inp">
+          <label class="text-center" for="InputEmail">Legajo</label>
+          <input
+            type="text"
+            class="form-control w-50"
+            id="InputLegajo"
+            required=""
+            formControlName="legajo"
+            [(ngModel)]="legajo"
+            name="legajo"
+          />
         </div>
+
+        <br />
+        <div class="inp">
+          <label for="InputPassword">Contraseña</label>
+          <input
+            type="password"
+            class="form-control w-50"
+            id="InputPassword"
+            required=""
+            formControlName="password"
+            [(ngModel)]="pass"
+            name="password"
+          />
+        </div>
+
+        <br />
+        <div class="inp row">
+          <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+            <button type="submit" class="btn btn-primary">Ingresar</button>
+          </div>
+          <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+            <a href="">Olvido su contraseña?</a>
+          </div>
+          <div class="col-12 col-xl-12 col-lg-12 col-md-12 col-sm-12">
+            <a class="nav-link active" routerLink="/altaUsuario"
+              >Nuevo usuario de PPS?</a
+            >
+          </div>
+        </div>
+      </div>
     </form>
+  </div>
 </div>
