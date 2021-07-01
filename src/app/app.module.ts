@@ -18,6 +18,8 @@ import { LoginComponent } from './shared/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SeguimientoComponent } from './shared/seguimiento/seguimiento.component';
 import { ListarUsuariosComponent } from './shared/listar-usuarios/listar-usuarios.component';
+import { UsuarioService } from './shared/alta-usuario/usuario.service';
+import { LoginService } from './shared/login/login.service';
 
 
 
@@ -45,7 +47,10 @@ import { ListarUsuariosComponent } from './shared/listar-usuarios/listar-usuario
     MatBadgeModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    UsuarioService,
+    LoginService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

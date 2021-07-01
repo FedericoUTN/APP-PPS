@@ -22,3 +22,9 @@ header {
 .textoBlanco {
     color: yellow;
 }
+
+.opc {
+    color: aliceblue;
+    font-size: 28px;
+    vertical-align: middle;
+}

@@ -2,6 +2,9 @@
     <h1 class="text-center">REGISTRARSE AQUI</h1>
     <form action="/src/app/server/createUsuario.php" method="POST" [formGroup]='formAltaUsuario' (ngSubmit)='save()' #f='ngForm'>
         <div class="container">
+            <div class="col-12">
+                <button class="btn btn-light" routerLink="/home"><i class="fas fa-chevron-left fa-2x"></i></button>
+            </div>
             <div class="mb-3 px-3">
                 <label for="InputName" class="form-label">Nombre</label>
                 <input type="text" class="form-control" name="name" id="InputName" formControlName="nombre" [(ngModel)]="user.nombre" name="nombre"></div>
@@ -37,5 +40,12 @@
         </div>
     </form>
     <br>
-
+    <div class="row" *ngIf="isValid">
+        <div class="col">
+            <div class="text-center">
+                <i class="fas fa-check-circle fa-5x green"></i>
+                <p class="green bigger">Se a creado el usuario con exito !</p>
+            </div>
+        </div>
+    </div>
 </div>

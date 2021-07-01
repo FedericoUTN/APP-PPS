@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {map} from 'rxjs/operators';
 import { Usuario } from 'src/app/model/Usuario';
 
 
@@ -10,8 +9,10 @@ import { Usuario } from 'src/app/model/Usuario';
 })
 export class UsuarioService {
   URL = 'http://localhost/server/';
-
-  constructor(private http: HttpClient) { }
+  public usuarioLogueado: Usuario = {legajo: '', pass: '', nombre: '', apellido: '', email: '', dni: '',
+  cellphone: '', localidad: '', direccion: '', cp: '', tipo: '' };
+  constructor(private http: HttpClient  ) {
+   }
 
   createUsuario(usuario: Usuario): any{
     return this.http.post(`${this.URL}createUsuario.php`, JSON.stringify(usuario), {responseType: 'text'});
@@ -28,6 +29,14 @@ export class UsuarioService {
   }
   editarUsuario(usuario: Usuario): any {
     return this.http.post(`${this.URL}updateUsuario.php`, JSON.stringify(usuario));
+  }
+  isNullUser(): boolean{
+    if (this.usuarioLogueado.legajo === ''){
+      return true;
+    }
+    else{
+      return false;
+    }
   }
 
 }

@@ -19,3 +19,12 @@ input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+
+.green {
+    color: white;
+}
+
+.bigger {
+    font-size: 33px;
+    font-style: oblique;
+}

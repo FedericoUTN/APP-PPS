@@ -14,7 +14,7 @@ formAltaUsuario: FormGroup;
 user: Usuario = {legajo: '', pass: '', nombre: '', apellido: '', email: '', dni: '',
  cellphone: '', localidad: '', direccion: '', cp: '', tipo: '' };
  usuarios: Array<Usuario> = [];
-
+isValid = false;
   constructor(private formBuilder: FormBuilder, private usuarioService: UsuarioService) {
     this.formAltaUsuario = this.formBuilder.group({
       nombre: [''],
@@ -34,6 +34,7 @@ user: Usuario = {legajo: '', pass: '', nombre: '', apellido: '', email: '', dni:
   save(): void {
   console.log(this.user);
   this.altaUsuario();
+  this.isValid = !this.isValid;
   }
 
   altaUsuario(): any{
